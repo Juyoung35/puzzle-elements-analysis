@@ -7,7 +7,7 @@
 
 (8개의 종류)
 |Genre|Sokoban|Witness|Nikoli|Chess|Card Game|Factory|Board Game|multiplayer pencil game|
-|---|---|---|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Example|Baba is you, Isles of sky and sea, Maxwell's puzzling demon|The Witness, Funny Looksy, Taiji|14 variants minesweeper|Fairy Chess|Marvel Snap, Pokemon Pocket, Balatro, Poker, Holdem, Stackland|Shapez.io, block factory|boardgamearena|Math with bad drawings|
 |SMT-solver available|---|---|---|---|---|---|---|---|
 |directions needed|---|---|---|---|---|---|---|---|
@@ -18,53 +18,53 @@
 |can be placed at 3d location|---|---|---|---|---|---|---|---|
 |should be inserted as form of minigame inside game|---|---|---|---|---|---|---|---|
 
-1. 소코반
-2. 위트네스
-3. 니콜리
-4. 체스
-5. 카드게임
-6. 공장
-7. 보드게임
-8. 다인 연필게임
+1. Sokoban
+2. Witness
+3. Nikoli
+4. Chess
+5. Card
+6. Factory
+7. Board Game
+8. multiplayer pencil game
 
 // claude sonnet 3.5 suggest more genre for puzzle games:
-1. 매치3. Match-3/Tile-matching
+1. **매치3**. Match-3/Tile-matching
 - Games like Bejeweled, Candy Crush
 - Focus on matching similar elements to clear them
 
-2. 물리기반, 테트리스. Physics-based puzzles, Block-falling/Tetris-like
+2. **물리기반, 테트리스**. Physics-based puzzles, Block-falling/Tetris-like
 - Games like Cut the Rope, Angry Birds
 - Involve understanding and manipulating physics mechanics
 - Tetris and its variants
 - Focus on organizing falling pieces
 
-3. 개방형 삼차원. Portal-style/Spatial reasoning
+3. **개방형 삼차원**. Portal-style/Spatial reasoning
 - 삼차원 공간에서 이뤄지는 다양한 퍼즐게임들을 이쪽으로 분류했음. The Witness도 이쪽 계열로 볼 수 있지만, 선 잇기라는 독보적인 테마가 있으므로 따로 유지한다.
 - Games like Portal, Antichamber
 - Focus on understanding and manipulating space/geometry
 - @me for additional, Manifold Garden, Superlimernal, ViewFinder
 
-4. 방탈출. Hidden object/Adventure puzzles, Escape room style
+4. **방탈출**. Hidden object/Adventure puzzles, Escape room style
 - Games like Room series
 - Combining items and finding hidden clues
 - Focus on environmental puzzles and sequential problem solving
 - Often combine multiple puzzle types
 - 
-5. 언어퍼즐. Word/Language puzzles
+5. **언어퍼즐**. Word/Language puzzles
 - Crosswords, Word Search, Wordle
 - Focus on vocabulary and language manipulation
 
-6. 패턴인식. Pattern recognition
+6. **패턴인식**. Pattern recognition
 - Games like Simon Says
 - Focus on memorizing and reproducing sequences
 - 닌텐도 말랑말랑 두뇌게임의 스피디한 패턴인식, 와리오 미니게임 이런것도 어울릴 듯
 
-7. 캐스트 퍼즐. Mechanical puzzles
+7. **캐스트 퍼즐**. Mechanical puzzles
 - Digital versions of physical puzzles like Rubik's Cube
 - Focus on manipulating complex mechanisms
 - 그 넣었다 뺐다 하는 그 퍼즐 말하는 것인듯.
 
-8. 플랫포머. Platformer Puzzle Game @me
+8. **플랫포머**. Platformer Puzzle Game @me
 - 윈도우 분할, 키보드 키 관련, 마우스 관련 등등 게임잼에서 참신한 아이디어를 갖고 플랫포머 퍼즐 게임으로 나오는 경우가 많다.
 - 사이드뷰, 탑뷰 등 시점전환도 있으며, 슈퍼마리오 원더가 이쪽 계열의 교과서이다.
 
