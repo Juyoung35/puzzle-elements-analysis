@@ -19,13 +19,21 @@
 |should be inserted as form of minigame inside game|---|---|---|---|---|---|---|---|
 
 1. Sokoban
-2. Witness
-3. Nikoli
-4. Chess
-5. Card
-6. Factory
-7. Board Game
-8. multiplayer pencil game
+- 당기기 가능?
+- 여러개 밀기 가능?
+- 좁은 공간에서 블록 미는 최적의 수 구하기(변형최소화) vs 더 다양한 기믹들 경험하기 vs 바바이즈유처럼 공간은 넓고 논리 기반 퍼즐 
+3. Witness
+4. Nikoli
+- 
+5. Chess
+- 격자변형, 피스변형, 룰변형
+6. Card
+7. Factory
+8. Board Game
+9. multiplayer pencil game
+- 공간
+- 숫자
+- 조합
 
 // claude sonnet 3.5 suggest more genre for puzzle games:
 1. **매치3**. Match-3/Tile-matching
