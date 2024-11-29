@@ -1,0 +1,10 @@
+cell, side, point, corner, padding.
+아예 
+element, padding, border, margin 채용하는건?
+기본적으로는 no-margin 태그로서, side-sharing, point-sharing 하다가 디자인적으로 떨어뜨려놔야할 때 적용될 수 있도록.
+
+현재 penpa의 스타일적 부분까지 그대로 가져오고 있는데
+
+3d 환경에서의 구현을 위해서는 수정이 필요할 것으로 보임.
+
+일단 보기 좋게 정의부 따로 써놓고, 구현부(impl) 따로 만들기. 아래다.
