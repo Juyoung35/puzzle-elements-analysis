@@ -14,7 +14,10 @@ pub mod prelude {
   pub type cell = usize;
   pub type side = usize;
   pub type point = usize;
+  // corner = (cell, point)
   pub type corner = usize;
+  // margin = (cell, side)
+  pub type margin = usize;
 }
 
 pub enum FiveColor {
