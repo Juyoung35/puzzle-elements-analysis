@@ -9,3 +9,10 @@ pub mod cage;
 pub mod box;
 pub mod composite;
 pub mod sudoku;
+
+pub mod prelude {
+  pub type cell = usize;
+  pub type side = usize;
+  pub type point = usize;
+  pub type corner = usize;
+}
