@@ -14,3 +14,7 @@ element, padding, border, margin 채용하는건?
 
 아예 공간 별 입장 가능한 제한 수를 1로 바꾸고, 2개 이상을 입장시키고 싶을 때는 아예 복합타입을 새롭게 정의하도록 만드는 것은 어떤가?
 그럼 애초에 저장 자체가 Single(pointer), Multiple(Vec<pointer>)가 되려나.
+멀티플이 아니라 Composite(pointer)가 될 수도.
+
+negative trait이 안되는 것 같기 때문에 매크로를 만들어서 impl_even!, impl_odd 박고
+Wall에 대해서는 하지 않고 derive(Even)으로 만들기.
