@@ -16,3 +16,11 @@ pub mod prelude {
   pub type point = usize;
   pub type corner = usize;
 }
+
+pub enum FiveColor {
+  Green,
+  Black,
+  Gray,
+  Red,
+  Blue,
+}
