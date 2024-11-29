@@ -1,0 +1,6 @@
+bevy가 render하는 방식은?
+commands.spawn과
+despawn(entity)뿐인가?
+
+transformation, svg, 벡터 등에 대해서 더 알아보자.
+easing function.
