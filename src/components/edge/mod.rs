@@ -35,4 +35,13 @@ pub struct NormalEdgeInterface {
 pub struct HelperInterface {
 }
 
-pub enum EdgeStyle
+#[derive(Default)]
+pub enum EdgeStyle {
+  #[default]
+  Colored(EdgeColor),
+  Thicker,
+  Thin,
+  Dotted,
+  FatDots,
+  Double,
+}
