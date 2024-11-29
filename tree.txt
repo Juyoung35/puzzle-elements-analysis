@@ -1,0 +1,46 @@
+대부분 요소들은 logic, display. 두 가지에 대해 타입을 만들어야함.
+surface, line 등은 component임.
+enum으로 line에 대해서, 뭐뭐에 대해서 나누지 말고, 평등한 관계로 만들기. 대신 bevy Component trait으로서는 surface, line 등의 마커를 운용할 것.
+ㄴ 근데 일일이 component 지웠다 수정하는 게 퍼포먼스 잡아먹지는 않을까?
+ㄴ 결국 뭐로 가든 무언가 희생하게 되어 있음. 간결성, 퍼포먼스..
+
+Component: // instance
+- Surface { surface: surface }
+- Line
+- NormalLine { surfaces: (surface, surface) }
+ㄴ 상하/좌우 판별하는 메소드 제공
+ㄴ 입력받은 surface에 대해 걸쳐 있는지 판별하는 메소드 제공
+ㄴ 입력받은 edge에 대해 걸쳐 있는지 판별하은 메소드 제공
+ㄴ Diagonal, Free와 다르게 제약이 있으므로, 유효한 surfaces를 가지고 있는지 판별하는 함수 필요.
+ㄴ 유효하지 않을 경우 Diagonal이나 Free로 바꿔치기 할 것.
+ㄴ Free도 최소한의 유효성 검사 함수가 있음. 그것조차 통과 안되면 게임규칙의 에러처리 방식을 따를 것. 보통 유효하지 않은 건 점의 형태니 점으로 바꾸든, 그리드 밖에 튀어나간거면 축소시키든 등.
+- DiagonalLine { surfaces: (surface, surface) }
+ㄴ 상하/좌우/대각선/역대각선 판별하는 메소드 제공
+- FreeLine { surfaces: (surface, surface) }
+ㄴ 거리, 탄젠트 등 숫자 반환하는 메소드 제공
+- MiddleLine { surface: surface, edge: edge }
+- Helper { edge: edge } // Edge에도 있는데 외관상 차이가 앖어 보여서 통합.
+- Edge
+- NormalEdge { points: (point, point) }
+ㄴ is_outside_frame
+ㄴ 입력받은 surface를 두르고 있다면 Some(bearing)을 반환, 아니라면 None.
+- DiagonalEdge { points: (point, point) }
+- FreeEdge { points: (point, point) }
+- Wall { edges: (edge, edge) }
+ㄴ triangle grid에서 사용 불가. 홀짝성. 아마 trait Even, Odd 구현해서 하먄 되지 않읆가 싶음.
+- Cage
+- CageGroup // my. 아마 필요하지 않을까. 꼭 cage가 아니라도 어떤 요소에 대해서라도 group 개념을 만들 필요는 있다.
+- KillerCage
+ㄴ Free에서 유효성 검사 함수를 추가한 버전. 하나의 띠를 이루는지 확인할 듯.
+- FreeCage { corners: ((surface, point), (surface, point)) } // 굉장히 복잡한데, 두 개의 코너(꼭직점 아님)이 필요함. 코너를 정의하려면 표면과 꼭짓점이 필요.
+ㄴ 아니면 그냥 corner array를 정의하는 게 나을지도. surface, edge, point, corner은 제공될 함수를 통해 서로 이동할 수 있으므로..
+- Box
+
+각각의 타입에 대해 이것들은 실질적 데이터를 담는다. 좌표, 숫자 등등. 그리고 어떤 instance를 참조하는지 id도 저장.
+surface, edge, point 세 종류의 그리드 저장공간이 있으며, 각 셀마다 벡터가 온다. 두 개 이상의 요소가 겹칠 수 있다는 거다.
+ㄴ 벡터로 depth 깊이 표현하려고 했는데 어짜피 얘가 랜더링에 기여 안 할 수도 있어서 걍 HashMap으로 하는 건 어떰? 벡터로 가도 인덱스로 참조하려고 하면 없는 경우 None등으로 채워놔야할 수도 있어서 HashMap이 더 나아보임.
+
+그리고 interface를 위한 타입에는 접미사로 -Interface가 붙으며, style을 명시한다. 이 인터페이스에는 규칙도 명시될 것이다.
+
+위의 말과 살짝 다른 게 있는데, instance들도 결국 랜더링할 때 필요함. line이 어디어디 연결중인지. box왼쪽 뚤렸는지 막혔는지 등 판단해야 할 요소달이 있음.
+ㄴ 이런거 벡터 svg로 그려야되나? 아니면 
