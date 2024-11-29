@@ -1,7 +1,7 @@
 use super::prelude::*;
 
 pub struct Surface {
-  surface: surface,
+  cell: cell,
 }
 
 pub struct SurfaceInterface {
