@@ -18,3 +18,10 @@ element, padding, border, margin 채용하는건?
 
 negative trait이 안되는 것 같기 때문에 매크로를 만들어서 impl_even!, impl_odd 박고
 Wall에 대해서는 하지 않고 derive(Even)으로 만들기.
+
+struct은 정의하는 건 다른 field를 가지고 있을 때고..
+ㄴ 그냥 중복정의 하더라도 그냥 macro로 구현해버리고
+모든 곳에 interface id를 넣어야 함. instance들은.
+아이면 instance를 상호작용 쪽에만 제한하려 아예 interface 전용 vector에 보관하고 꺼내 쓰는건?
+
+랜더링을 bevy에서 어떻게 처리하는지 좀 알 필요 있음.
