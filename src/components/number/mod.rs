@@ -33,4 +33,8 @@ pub struct TapaNumber {
 }
 
 pub struct ArrowNumber {
-  
+  cell: cell,
+  start: side,
+  end: side,
+  letter: String,
+}
