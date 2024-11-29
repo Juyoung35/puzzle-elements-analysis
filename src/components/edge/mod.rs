@@ -1,3 +1,6 @@
+use super::prelude::*;
+use super::FiveColor as EdgeColor;
+
 pub trait Edge {
 }
 
@@ -16,3 +19,20 @@ pub struct FreeEdge {
 pub struct Helper {
   side: side,
 }
+
+pub struct NormalEdgeInterface {
+  style: EdgeStyle,
+}
+
+pub struct NormalEdgeInterface {
+  style: EdgeStyle,
+}
+
+pub struct NormalEdgeInterface {
+  style: EdgeStyle,
+}
+
+pub struct HelperInterface {
+}
+
+pub enum EdgeStyle
