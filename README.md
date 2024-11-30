@@ -82,7 +82,6 @@
 - Pure deduction based on given rules
 
 ## 게임 별 분석
-
 ### 1. 14가지 변형 지뢰찾기 (fandom)
 [Q] - Quad: There must be at least 1 mine in every 2x2 area.
 
