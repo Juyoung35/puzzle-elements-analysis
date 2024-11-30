@@ -38,3 +38,13 @@ pub struct ArrowNumber {
   end: side,
   letter: String,
 }
+
+pub struct LongNumber {
+  cell: cell,
+  string: String,
+}
+
+pub struct KillerNumber {
+  cell: cell,
+  string: String,
+}
